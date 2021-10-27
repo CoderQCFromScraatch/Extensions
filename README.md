@@ -1,3 +1,1 @@
-# CoderQC
-
-Just some extensions
+# CoderQC's Scratch Extensions
