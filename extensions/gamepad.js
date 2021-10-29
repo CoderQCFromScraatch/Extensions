@@ -105,7 +105,7 @@ class SingleGamepad {
     }
     
     rumble(s,w,t,i) {
-        var gamepad = this.gamepads[i].getGamepad()
+        var gamepad = this.gamepads[i -1].getGamepad()
         if (gamepad != null && gamepad.vibrationActuator) {
             gamepad.vibrationActuator.playEffect("dual-rumble", {
                 duration: 1000*t,
