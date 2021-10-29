@@ -250,7 +250,7 @@ class ScratchGamepad {
     }
     
     rumble({s,w,t,i}) {
-        this.gamepads[i-1].rumble(s,w,t)
+        this.gamepads[i-1].rumble(s,w,t,i)
     }
 }
 
