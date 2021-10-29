@@ -198,30 +198,7 @@ class ScratchGamepad {
                             },
                         },                    
                     },
-                    {
-                        "opcode": "rumble",
-                        "blockType": "command",
-                        "text": "rumble strong [s] and weak [w] for [t] sec. on pad [i]",
-                        "arguments": {
-                            "s": {
-                                "type": "number",
-                                "defaultValue": "0.25"
-                            },
-                            "w": {
-                                "type": "number",
-                                "defaultValue": "0.5"
-                            },
-                            "t": {
-                                "type": "number",
-                                "defaultValue": "0.25"
-                            },
-                            "i": {
-                                "type": "number",
-                                "defaultValue": "1",
-                                "menu": "padMenu"
-                            },
-                        },                    
-                    },
+                   
             ],
             "menus": {
                 "pressReleaseMenu": [{text:"press",value:1}, {text:"release",value:0}],
