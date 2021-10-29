@@ -197,8 +197,7 @@ class ScratchGamepad {
                                 "menu": "padMenu"
                             },
                         },                    
-                    },
-                   
+                    }             
             ],
             "menus": {
                 "pressReleaseMenu": [{text:"press",value:1}, {text:"release",value:0}],
@@ -227,7 +226,7 @@ class ScratchGamepad {
     }
     
     rumble({s,w,t,i}) {
-        this.gamepads[i-1].rumble(s,w,t,i-1)
+        this.gamepads[i-1].rumble(s,w,t)
     }
 }
 
