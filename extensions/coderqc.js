@@ -1,9 +1,9 @@
-var tempvar;
+
 class CQCExtraExtension {
     constructor(runtime) {
         this.runtime = runtime;
     }
-    
+    string tempvar;
     getInfo() {
         return {
             id: 'cqcextra',
