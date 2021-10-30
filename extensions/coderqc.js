@@ -2,7 +2,7 @@
 class CQCExtraExtension {
     constructor(runtime) {
         this.runtime = runtime;
-        tempvar = "";
+        this.tempvar = "";
     }
     getInfo() {
         return {
@@ -390,7 +390,7 @@ class CQCExtraExtension {
         eval(args.code)
     }
         temp(args) {
-        return tempVar;
+        return this.tempVar;
     }
     playSound(args) {
         var audio = new Audio(args.url);
