@@ -1,6 +1,6 @@
 
 class CQCExtraExtension {
-    constructor(runtime) {
+    constructor(runtime,tempvar) {
         this.runtime = runtime;
         this.tempvar = "";
     }
