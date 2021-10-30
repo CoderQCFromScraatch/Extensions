@@ -2,6 +2,7 @@ class CQCExtraExtension {
     constructor(runtime) {
         this.runtime = runtime;
     }
+    var tempvar;
     getInfo() {
         return {
             id: 'cqcextra',
@@ -25,6 +26,11 @@ class CQCExtraExtension {
                     opcode: 'time',
                     blockType: Scratch.BlockType.REPORTER,
                     text: 'Time',
+                },
+                                     {
+                    opcode: 'temp',
+                    blockType: Scratch.BlockType.REPORTER,
+                    text: 'Temp Variable',
                 },
                 {
                     opcode: 'getScreenRes',
@@ -381,6 +387,9 @@ class CQCExtraExtension {
     }
     JSCode(args) {
         eval(args.code)
+    }
+        temp(args) {
+        return tempVar;
     }
     playSound(args) {
         var audio = new Audio(args.url);
