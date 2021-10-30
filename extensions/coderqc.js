@@ -390,7 +390,7 @@ class CQCExtraExtension {
         eval(args.code)
     }
         temp(args) {
-        return this.tempVar;
+        return tempvar;
     }
     playSound(args) {
         var audio = new Audio(args.url);
