@@ -33,7 +33,7 @@ class CQCExtraExtension {
                                      {
                     opcode: 'temp',
                     blockType: Scratch.BlockType.REPORTER,
-                    text: 'Temp Variable',
+                    text: 'Temporary Variable',
                 },
                 {
                     opcode: 'getScreenRes',
