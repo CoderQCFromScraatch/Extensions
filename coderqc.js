@@ -1,6 +1,10 @@
+var tempvar = ""; 
+
+
 class CQCExtraExtension {
-    constructor(runtime) {
+    constructor(runtime,extensionId) {
         this.runtime = runtime;
+
     }
     getInfo() {
         return {
@@ -25,6 +29,11 @@ class CQCExtraExtension {
                     opcode: 'time',
                     blockType: Scratch.BlockType.REPORTER,
                     text: 'Time',
+                },
+                                     {
+                    opcode: 'temp',
+                    blockType: Scratch.BlockType.REPORTER,
+                    text: 'Temporary Variable',
                 },
                 {
                     opcode: 'getScreenRes',
@@ -381,6 +390,9 @@ class CQCExtraExtension {
     }
     JSCode(args) {
         eval(args.code)
+    }
+        temp(args) {
+        return tempvar;
     }
     playSound(args) {
         var audio = new Audio(args.url);
