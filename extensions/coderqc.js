@@ -1,8 +1,9 @@
+var tempvar = ""; 
+
 
 class CQCExtraExtension {
-    constructor(runtime,tempvar) {
+    constructor(runtime,extensionId) {
         this.runtime = runtime;
-        this.tempvar = " ";
 
     }
     getInfo() {
@@ -390,8 +391,7 @@ class CQCExtraExtension {
     JSCode(args) {
         eval(args.code)
     }
-    tempvar = this.tempvar;
-        temp(args,runtime) {
+        temp(args) {
         return tempvar;
     }
     playSound(args) {
