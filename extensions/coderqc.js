@@ -389,7 +389,7 @@ class CQCExtraExtension {
     JSCode(args) {
         eval(args.code)
     }
-        temp(args) {
+        temp(args,tempvar) {
         return tempvar;
     }
     playSound(args) {
