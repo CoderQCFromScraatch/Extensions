@@ -1,4 +1,4 @@
-tempvar = " ";
+runtime.tempvar = " ";
 class CQCExtraExtension {
     constructor(runtime,tempvar) {
         this.runtime = runtime;
