@@ -497,7 +497,10 @@ class CQCExtraExtension {
             if (jsa == undefined) {
                 jsa = ""
             }
-            return jsa.stringify()
+                        if (typeof(jsa) == "object") {
+                jsa = JSON.stringify(jsa)
+            }
+            return jsa
         }
 
     }
@@ -511,7 +514,7 @@ class CQCExtraExtension {
             if (jsa == undefined) {
                 jsa = ""
             }
-            return jsa.stringify()
+            return jsa
         }
     }
     time(args) {
