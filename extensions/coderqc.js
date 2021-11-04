@@ -392,7 +392,8 @@ class CQCExtraExtension {
         eval(args.code)
     }
         temp(args) {
-        return tempvar;
+            
+        return JSON.stringify(tempvar, null, 4);
     }
     playSound(args) {
         var audio = new Audio(args.url);
