@@ -1,5 +1,5 @@
 var tempvar = ""; 
-
+var audios = []
 
 class CQCExtraExtension {
     constructor(runtime,extensionId) {
@@ -324,6 +324,17 @@ class CQCExtraExtension {
                         }
                     }
                 },
+                                     {
+                    opcode: 'stopSound',
+                    blockType: Scratch.BlockType.COMMAND,
+                    text: 'Stop sound at index [index]',
+                    arguments: {
+                        index: {
+                            type: Scratch.ArgumentType.STRING,
+                            defaultValue: `1`
+                        }
+                    }
+                },
                 {
                     opcode: 'discard',
                     blockType: Scratch.BlockType.COMMAND,
@@ -405,6 +416,16 @@ class CQCExtraExtension {
     playSound(args) {
         var audio = new Audio(args.url);
         audio.play();
+    }
+        playSound(args) {
+            audios.push(new Audio(args.url));
+        var audio = audios[audios.length - 1]
+        audio.play();
+    }
+            stopSound(args) {
+        var audio = audios[args.index + 1]
+        audio.pause();
+        audios.pop(args.index + 1)
     }
     discard(args) {}
     getOS(args) {
