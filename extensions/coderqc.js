@@ -413,14 +413,14 @@ class CQCExtraExtension {
                         };
             return thing
     }
-    playSound(args) {
-        var audio = new Audio(args.url);
-        audio.play();
-    }
         playSound(args) {
             audios.push(new Audio(args.url));
         var audio = audios[audios.length - 1]
+        var audindex = audios.length - 1
         audio.play();
+            audio.addEventListener('ended', (event) => {
+         audios.pop(audindex)
+});
     }
             stopSound(args) {
         var audio = audios[args.index - 1]
