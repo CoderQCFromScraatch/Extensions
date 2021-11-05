@@ -398,7 +398,7 @@ class CQCExtraExtension {
             thing = thing.substr(0)
             }
                         if (thing.endsWith('"')) {
-            thing = thing.substr(thing.length - 1)
+            thing = thing.substr(thing,1)
             }
             return thing
     }
