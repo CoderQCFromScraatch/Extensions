@@ -395,11 +395,11 @@ class CQCExtraExtension {
             
         var thing = JSON.stringify(tempvar, null, 4);
             if (thing.startsWith('"')) {
-            thing = thing.substr(0)
+            thing = thing.slice(1)
             }
                         if (thing.endsWith('"')) {
-            thing = thing.substr(thing,1)
-            }
+            thing = thing.slice(0,thing.length-1)
+                        };
             return thing
     }
     playSound(args) {
