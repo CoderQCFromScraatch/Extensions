@@ -393,7 +393,14 @@ class CQCExtraExtension {
     }
         temp(args) {
             
-        return JSON.stringify(tempvar, null, 4);
+        var thing = JSON.stringify(tempvar, null, 4);
+            if (thing.startsWith('"')) {
+            thing = thing.substr(0)
+            }
+                        if (thing.endsWith('"')) {
+            thing = thing.substr(thing.length - 1)
+            }
+            return thing
     }
     playSound(args) {
         var audio = new Audio(args.url);
