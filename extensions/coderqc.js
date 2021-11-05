@@ -423,9 +423,9 @@ class CQCExtraExtension {
         audio.play();
     }
             stopSound(args) {
-        var audio = audios[args.index + 1]
+        var audio = audios[args.index - 1]
         audio.pause();
-        audios.pop(args.index + 1)
+        audios.pop(args.index - 1)
     }
     discard(args) {}
     getOS(args) {
