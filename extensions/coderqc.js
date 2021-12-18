@@ -186,6 +186,17 @@ class CQCExtraExtension {
                         }
                     }
                 },
+                                     {
+                    opcode: 'ramSaver',
+                    blockType: Scratch.BlockType.REPORTER,
+                    text: 'Optimize number [num]',
+                    arguments: {
+                        num: {
+                            type: Scratch.ArgumentType.NUMBER,
+                            defaultValue: '0'
+                        }
+                    }
+                },
                 {
                     opcode: 'color',
                     blockType: Scratch.BlockType.REPORTER,
@@ -517,6 +528,9 @@ class CQCExtraExtension {
     }
     calcPercent(args) {
         return args.value / args.total * 100
+    }
+        ramSaver(args) {
+        return String(args.num)
     }
     parseJSON(args) {
         var jsa = ""
