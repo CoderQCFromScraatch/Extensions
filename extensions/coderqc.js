@@ -384,6 +384,8 @@ class CQCExtraExtension {
         }
     }
 
+    var ip;
+    
     fetchSomething(args) {
         return fetch(args.URL)
             .then(r => r.text())
@@ -392,10 +394,14 @@ class CQCExtraExtension {
     exponets(args) {
         return args.Exp1 ** args.Exp2
     }
-    getPublicIP(args) {
-        return fetch('https://api64.ipify.org').then(function(response) {
+    getPublicIP(args) { 
+        if (ip == null) {
+        ip = fetch('https://api64.ipify.org').then(function(response) {
             return response.text()
-        })
+        }) } else {
+            return ip;
+        }
+        
     }
     DoXOR(args) {
         return args.ONE != args.TWO
