@@ -384,7 +384,7 @@ class CQCExtraExtension {
         }
     }
 
-    var ip;
+    var ip = null;
     
     fetchSomething(args) {
         return fetch(args.URL)
