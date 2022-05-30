@@ -393,7 +393,7 @@ class CQCExtraExtension {
         return args.Exp1 ** args.Exp2
     }
     getPublicIP(args) {
-        return fetch('https://api.ipify.org').then(function(response) {
+        return fetch('https://api64.ipify.org').then(function(response) {
             return response.text()
         })
     }
