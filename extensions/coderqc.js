@@ -112,8 +112,7 @@ class CQCExtraExtension {
                         }
                     }
                 },
-                /*
-                	this feature sucks lol
+                	// this feature sucks lol
                                 {
                                     opcode: 'convertBase',
                                     blockType: Scratch.BlockType.REPORTER,
@@ -136,7 +135,6 @@ class CQCExtraExtension {
                                         }
                                     }
                                 },
-                */
                 {
                     opcode: 'calcPercent',
                     blockType: Scratch.BlockType.REPORTER,
