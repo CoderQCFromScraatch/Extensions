@@ -116,22 +116,22 @@ class CQCExtraExtension {
                                 {
                                     opcode: 'convertBase',
                                     blockType: Scratch.BlockType.REPORTER,
-                                    text: 'convert [num] in base [cur] to base [to]',
+                                    text: 'convert [num] in base [from] to base [to]',
                                     arguments: {
                                         num: {
                                             type: Scratch.ArgumentType.NUMBER,
                                             defaultValue: ' '
                                         },
 
-                                        cur: {
+                                        from: {
                                             type: Scratch.ArgumentType.STRING,
                                             menu: 'base',
-                                            defaultValue: '(10) decimal'
+                                            defaultValue: '(10): decimal'
                                         },
                                         to: {
                                             type: Scratch.ArgumentType.STRING,
                                             menu: 'base',
-                                            defaultValue: '(16) hex'
+                                            defaultValue: '(16): hex'
                                         }
                                     }
                                 },
@@ -481,31 +481,31 @@ class CQCExtraExtension {
     return (args) {
         return args.return
     }
-    baseConvert(args) {
-        var from = args.cur
+    convertBase(args) {
+        var from = args.from
         var to = args.to
-        if (args.cur.startsWith("(2)")) {
+        if (from.startsWith("(2)")) {
             var from = 2
         }
-        if (args.cur.startsWith("(8)")) {
+        if (from.startsWith("(8)")) {
             var from = 8
         }
-        if (args.cur.startsWith("(10)")) {
+        if (from.startsWith("(10)")) {
             var from = 10
         }
-        if (args.cur.startsWith("(16)")) {
+        if (from.startsWith("(16)")) {
             var from = 16
         }
-        if (args.to.startsWith("(2)")) {
+        if (to.startsWith("(2)")) {
             var to = 2
         }
-        if (args.to.startsWith("(8)")) {
+        if (to.startsWith("(8)")) {
             var to = 8
         }
-        if (args.to.startsWith("(10)")) {
+        if (to.startsWith("(10)")) {
             var to = 10
         }
-        if (args.to.startsWith("(16)")) {
+        if (to.startsWith("(16)")) {
             var to = 16
         }
 
