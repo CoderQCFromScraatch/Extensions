@@ -509,18 +509,9 @@ class CQCExtraExtension {
             var to = 16
         }
 
-        function changeBase(number, fromBase, toBase) {
-            if (fromBase == 10)
-                return (parseInt(number)).toString(toBase)
-            else if (toBase == 10)
-                return parseInt(number, fromBase);
-            else {
-                var numberInDecimal = parseInt(number, fromBase);
-                return parseInt(numberInDecimal).toString(toBase);
-            }
-        }
+        
 
-        return changeBase(args.num, from, to)
+        return args.number.toString(to)
     }
     isUppercase(args) {
         return String(args.val) == String(args.val).toUpperCase();
