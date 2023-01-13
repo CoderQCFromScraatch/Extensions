@@ -511,7 +511,7 @@ class CQCExtraExtension {
 
         
 
-        return args.number.toString(to)
+        return args.num.toString(to)
     }
     isUppercase(args) {
         return String(args.val) == String(args.val).toUpperCase();
